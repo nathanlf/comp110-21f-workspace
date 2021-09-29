@@ -34,6 +34,7 @@ def is_equal(nums_one: list[int], nums_two: list[int]) -> bool:
 
 
 def max(in_list: list[int]) -> int:
+    """Returns the largest number from a given list."""
     if len(in_list) == 0:
         raise ValueError("max() arg is an empty List")
 
