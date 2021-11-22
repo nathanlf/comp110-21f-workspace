@@ -50,14 +50,14 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
     """Returns a new column-based 'table' with a certain number of rows from the data for each column."""
     result: dict[str, list[str]] = {}
-    if n > len(table):
-        return table
     for column in table:
         values: list[str] = []
         i: int = 0
         while i < n:
             values.append(table[column][i])
             i += 1
+            if n > len(table[column]):
+                return table
         result[column] = values
 
     return result

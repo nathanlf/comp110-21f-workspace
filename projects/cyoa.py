@@ -69,7 +69,7 @@ def guessing_easy() -> None:
         rand_num: int = random.randint(LOWER, UPPER_EASY)
         guess: int = int(input((f"\nGuess the number between {LOWER} and {UPPER_EASY}: ")))
         result: int = compare(guess, rand_num)
-        
+
         if result == 1:
             print("Correct!")
             points += 5
