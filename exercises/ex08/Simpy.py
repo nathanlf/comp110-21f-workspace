@@ -8,6 +8,7 @@ __author__ = "730483098"
 
 
 class Simpy:
+    """Simplified version of NumPy."""
     values: list[float]
 
     def __init__(self, vs: list[float]):
